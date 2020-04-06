@@ -8,6 +8,7 @@ inherit rpm
 DESCRIPTION="Serves ProtonMail to IMAP/SMTP clients"
 HOMEPAGE="https://protonmail.com/bridge/"
 SRC_URI="https://protonmail.com/download/${P/-bin/}-1.x86_64.rpm"
+# https://protonmail.com/download/protonmail-bridge-1.2.6-1.x86_64.rpm
 
 RESTRICT="bindist mirror"
 
@@ -124,7 +125,6 @@ src_prepare() {
 	rm "plugins/sensors/libqtsensors_iio-sensor-proxy.so" || die
 	rm "plugins/sensors/libqtsensors_linuxsys.so" || die
 	rm "plugins/sqldrivers/libqsqlite.so" || die
-	rm "plugins/sqldrivers/libqsqlmysql.so" || die
 	rm "plugins/sqldrivers/libqsqlpsql.so" || die
 	rm "plugins/xcbglintegrations/libqxcb-egl-integration.so" || die
 	rm "qml/Qt/labs/calendar/libqtlabscalendarplugin.so" || die
@@ -139,7 +139,6 @@ src_prepare() {
 	rm "qml/Qt3D/Logic/libquick3dlogicplugin.so" || die
 	rm "qml/Qt3D/Render/libquick3drenderplugin.so" || die
 	rm "qml/QtBluetooth/libdeclarative_bluetooth.so" || die
-	rm "qml/QtCanvas3D/libqtcanvas3d.so" || die
 	rm "qml/QtGamepad/libdeclarative_gamepad.so" || die
 	rm "qml/QtLocation/libdeclarative_location.so" || die
 	rm "qml/QtMultimedia/libdeclarative_multimedia.so" || die
