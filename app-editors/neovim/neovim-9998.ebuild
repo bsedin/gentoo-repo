@@ -48,8 +48,6 @@ RDEPEND="
 	app-eselect/eselect-vi
 "
 
-S=${WORKDIR}/neovim-nightly
-
 CMAKE_BUILD_TYPE=Release
 
 src_prepare() {
