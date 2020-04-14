@@ -3,13 +3,15 @@
 
 EAPI=7
 
-inherit cmake eutils xdg
+inherit cmake eutils xdg git-r3
 
 DESCRIPTION="Vim-fork focused on extensibility and agility."
 HOMEPAGE="https://neovim.io"
 
+EGIT_REPO_URI="https://github.com/neovim/neovim.git"
+EGIT_COMMIT="nightly"
 SRC_URI="https://github.com/neovim/neovim/archive/nightly.tar.gz -> ${P}.tar.gz"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 x86"
 
 LICENSE="Apache-2.0 vim"
 SLOT="0"
