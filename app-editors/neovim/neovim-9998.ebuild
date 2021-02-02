@@ -27,6 +27,7 @@ DEPEND="
 	dev-libs/libuv:0=
 	>=dev-libs/libvterm-0.1.2
 	dev-libs/libutf8proc
+	dev-libs/tree-sitter
 	dev-libs/msgpack:0=
 	dev-lua/lpeg[luajit=]
 	dev-lua/luv[luajit=]
