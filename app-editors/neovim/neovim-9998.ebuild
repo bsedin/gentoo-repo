@@ -43,6 +43,7 @@ DEPEND="${LUA_DEPS}
 		dev-lua/LuaBitOp[${LUA_USEDEP}]
 	' lua5-{1,2})
 	dev-libs/libuv:0=
+	dev-libs/tree-sitter:0=
 	>=dev-libs/libvterm-0.1.2
 	dev-libs/msgpack:0=
 	net-libs/libnsl
