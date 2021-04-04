@@ -57,6 +57,8 @@ RDEPEND="
 	app-eselect/eselect-vi
 "
 
+CMAKE_BUILD_TYPE=Release
+
 # PATCHES=(
 # 	"${FILESDIR}/${PN}-0.4.4-cmake_lua_version.patch"
 # 	"${FILESDIR}/${PN}-0.4.4-cmake-release-type.patch"
