@@ -11,7 +11,7 @@ DESCRIPTION="Vim-fork focused on extensibility and agility."
 HOMEPAGE="https://neovim.io"
 
 EGIT_REPO_URI="https://github.com/neovim/neovim.git"
-EGIT_COMMIT="master"
+EGIT_BRANCH="master"
 KEYWORDS="amd64 x86"
 
 LICENSE="Apache-2.0 vim"
