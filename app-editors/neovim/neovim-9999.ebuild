@@ -3,7 +3,7 @@
 
 EAPI=7
 
-LUA_COMPAT=( lua5-{1..2} luajit )
+LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit cmake lua-single optfeature xdg git-r3
 
