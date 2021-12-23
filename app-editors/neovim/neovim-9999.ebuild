@@ -41,12 +41,11 @@ DEPEND="${LUA_DEPS}
 	')
 	$(lua_gen_cond_dep '
 		dev-lua/LuaBitOp[${LUA_USEDEP}]
-	' lua5-{1,2})
+	' lua5-{1,4})
 	dev-libs/libuv:0=
 	dev-libs/tree-sitter:0=
 	>=dev-libs/libvterm-0.1.2
 	dev-libs/msgpack:0=
-	net-libs/libnsl
 	tui? (
 		dev-libs/libtermkey
 		>=dev-libs/unibilium-2.0.0:0=
@@ -57,12 +56,11 @@ RDEPEND="
 	app-eselect/eselect-vi
 "
 
-CMAKE_BUILD_TYPE=Release
-
-# PATCHES=(
-# 	"${FILESDIR}/${PN}-0.4.4-cmake_lua_version.patch"
-# 	"${FILESDIR}/${PN}-0.4.4-cmake-release-type.patch"
-# )
+PATCHES=(
+	"${FILESDIR}/${PN}-0.4.4-cmake_lua_version.patch"
+	"${FILESDIR}/${PN}-0.4.4-cmake-release-type.patch"
+	"${FILESDIR}/${PN}-0.4.4-cmake-darwin.patch"
+)
 
 src_prepare() {
 	# use our system vim dir
@@ -83,6 +81,7 @@ src_configure() {
 		-DFEAT_TUI=$(usex tui)
 		-DPREFER_LUA=$(usex lua_single_target_luajit no "$(lua_get_version)")
 		-DLUA_PRG="${ELUA}"
+		-DMIN_LOG_LEVEL=3
 	)
 	cmake_src_configure
 }
@@ -91,8 +90,8 @@ src_install() {
 	cmake_src_install
 
 	# install a default configuration file
-	# insinto /etc/vim
-	# doins "${FILESDIR}"/sysinit.vim
+	insinto /etc/vim
+	doins "${FILESDIR}"/sysinit.vim
 
 	# conditionally install a symlink for nvimpager
 	if use nvimpager; then
@@ -102,6 +101,7 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+
 	optfeature "clipboard support" x11-misc/xsel x11-misc/xclip gui-apps/wl-clipboard
 	optfeature "Python plugin support" dev-python/pynvim
 	optfeature "Ruby plugin support" dev-ruby/neovim-ruby-client
