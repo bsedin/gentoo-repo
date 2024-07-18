@@ -23,21 +23,22 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="aac ffmpeg hid keyfinder lv2 modplug mp3 mp4 opus qtkeychain shout wavpack"
 
+# dev-qt/qtcore:6
+# dev-qt/qtdbus:6
+# dev-qt/qtgui:6
+# dev-qt/qtnetwork:6
+# dev-qt/qtopengl:6
+# dev-qt/qtscript:6[scripttools]
+# dev-qt/qtsql:6
+# dev-qt/qtsvg:6
+# dev-qt/qtwidgets:6
+# dev-qt/qtx11extras:6
+# dev-qt/qtxml:6
+
 RDEPEND="
 	dev-db/sqlite
 	dev-libs/glib:2
 	dev-libs/protobuf:=
-	dev-qt/qtcore:6
-	dev-qt/qtdbus:6
-	dev-qt/qtgui:6
-	dev-qt/qtnetwork:6
-	dev-qt/qtopengl:6
-	dev-qt/qtscript:6[scripttools]
-	dev-qt/qtsql:6
-	dev-qt/qtsvg:6
-	dev-qt/qtwidgets:6
-	dev-qt/qtx11extras:6
-	dev-qt/qtxml:6
 	media-libs/chromaprint
 	media-libs/flac:=
 	media-libs/libebur128
@@ -79,12 +80,15 @@ RDEPEND="
 	# Meanwhile we're using the bundled libshout-idjc. See bug #775443
 	#shout? ( >=media-libs/libshout-idjc-2.4.6 )
 
+# dev-qt/qtconcurrent:5
+
 DEPEND="${RDEPEND}
-	dev-qt/qtconcurrent:5
 "
+
+# dev-qt/qttest:6
+# dev-qt/qtxmlpatterns:6
+
 BDEPEND="
-	dev-qt/qttest:6
-	dev-qt/qtxmlpatterns:6
 	virtual/pkgconfig
 "
 
