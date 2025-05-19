@@ -63,6 +63,7 @@ CRATES="
 	crypto-common@0.1.6
 	cxx-build@1.0.144
 	cxx@1.0.144
+	cxxbridge-cmd@1.0.144
 	cxxbridge-flags@1.0.144
 	cxxbridge-macro@1.0.144
 	der@0.6.1
