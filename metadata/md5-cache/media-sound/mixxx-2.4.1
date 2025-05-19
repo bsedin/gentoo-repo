@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5 virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=dev-db/sqlite dev-libs/glib:2 dev-libs/protobuf:= media-libs/chromaprint media-libs/flac:= media-libs/libebur128 media-libs/libid3tag:= media-libs/libogg media-libs/libsndfile media-libs/libsoundtouch media-libs/libvorbis media-libs/portaudio[alsa] media-libs/portmidi media-libs/rubberband media-libs/taglib media-libs/vamp-plugin-sdk media-sound/lame sci-libs/fftw:3.0= sys-power/upower virtual/glu virtual/libusb:1 virtual/opengl virtual/udev x11-libs/libX11 aac? ( media-libs/faad2 media-libs/libmp4v2 ) ffmpeg? ( media-video/ffmpeg:= ) hid? ( dev-libs/hidapi ) keyfinder? ( media-libs/libkeyfinder ) lv2? ( media-libs/lilv ) modplug? ( media-libs/libmodplug ) mp3? ( media-libs/libmad ) mp4? ( media-libs/libmp4v2:= ) opus? ( media-libs/opusfile ) qtkeychain? ( dev-libs/qtkeychain:=[qt6(+)] ) wavpack? ( media-sound/wavpack )
+DESCRIPTION=Advanced Digital DJ tool based on Qt
+EAPI=8
+HOMEPAGE=https://mixxx.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=cmake xdg udev
+IUSE=aac ffmpeg hid keyfinder lv2 modplug mp3 mp4 opus qtkeychain shout wavpack
+KEYWORDS=amd64 ~arm64 x86
+LICENSE=GPL-2
+RDEPEND=dev-db/sqlite dev-libs/glib:2 dev-libs/protobuf:= media-libs/chromaprint media-libs/flac:= media-libs/libebur128 media-libs/libid3tag:= media-libs/libogg media-libs/libsndfile media-libs/libsoundtouch media-libs/libvorbis media-libs/portaudio[alsa] media-libs/portmidi media-libs/rubberband media-libs/taglib media-libs/vamp-plugin-sdk media-sound/lame sci-libs/fftw:3.0= sys-power/upower virtual/glu virtual/libusb:1 virtual/opengl virtual/udev x11-libs/libX11 aac? ( media-libs/faad2 media-libs/libmp4v2 ) ffmpeg? ( media-video/ffmpeg:= ) hid? ( dev-libs/hidapi ) keyfinder? ( media-libs/libkeyfinder ) lv2? ( media-libs/lilv ) modplug? ( media-libs/libmodplug ) mp3? ( media-libs/libmad ) mp4? ( media-libs/libmp4v2:= ) opus? ( media-libs/opusfile ) qtkeychain? ( dev-libs/qtkeychain:=[qt6(+)] ) wavpack? ( media-sound/wavpack )
+SLOT=0
+SRC_URI=https://github.com/mixxxdj/mixxx/archive/refs/tags/2.4.1.tar.gz -> mixxx-2.4.1.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	258a4691fd43b8cd5814cb1acbb3c7df	xdg	4a14c5c24f121e7da66e5aab4a168c6e	udev	eec0bbab06977f1cfc5597269c1fa152
+_md5_=d2948385350fdccb934a3c276c091fa2
